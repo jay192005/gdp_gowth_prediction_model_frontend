@@ -1,43 +1,172 @@
+# GDP Growth Prediction Model - Frontend
 
-  # Vikalp.ai Dashboard Design
+A React + Vite application for GDP growth prediction and scenario simulation with Firebase authentication.
 
-  This is a code bundle for Vikalp.ai Dashboard Design. The original project is available at https://www.figma.com/design/E5Z6oODwoxLyK9rniM6BwT/GDP-Forecaster-Dashboard-Design.
+## 🚀 Quick Deploy to Vercel
 
-  ## Running the code
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/jay192005/gdp_gowth_prediction_model_frontend)
 
-  Run `npm i` to install the dependencies.
+## 📋 Prerequisites
 
-  Run `npm run dev` to start the development server.
-  
+- Node.js 18+ 
+- npm or pnpm
+- Firebase project (for authentication)
+- Backend API deployed (Railway/Render)
 
-## Environment Configuration
+## 🛠️ Tech Stack
 
-The application uses environment variables to configure the API base URL for different environments.
+- **Framework**: React 18 + Vite 6
+- **Styling**: Tailwind CSS 4
+- **UI Components**: Radix UI + shadcn/ui
+- **Authentication**: Firebase Auth
+- **Charts**: Recharts
+- **State Management**: React Context API
 
-### Environment Variables
+## 📦 Installation
 
-- `VITE_API_BASE_URL`: The base URL for the backend API server
+```bash
+# Install dependencies
+npm install
 
-### Setup
+# Copy environment variables
+cp .env.example .env.development
+```
 
-1. **Development Environment**: Create a `.env.development` file in the frontend directory:
-   ```
-   VITE_API_BASE_URL=http://localhost:5000
-   ```
+## 🔧 Environment Variables
 
-2. **Production Environment**: Create a `.env.production` file in the frontend directory:
-   ```
-   VITE_API_BASE_URL=https://your-production-api-url.com
-   ```
+Create `.env.production` for Vercel deployment:
 
-### Default Values
+```env
+# Backend API URL
+VITE_API_BASE_URL=https://your-backend-url.onrender.com
 
-If no environment variable is set, the application defaults to `http://localhost:5000`.
+# Firebase Configuration
+VITE_FIREBASE_API_KEY=your_api_key
+VITE_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
+VITE_FIREBASE_PROJECT_ID=your_project_id
+VITE_FIREBASE_STORAGE_BUCKET=your_project.appspot.com
+VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+VITE_FIREBASE_APP_ID=your_app_id
+```
 
-### Usage
+## 🏃 Local Development
 
-The environment variables are automatically loaded by Vite based on the current mode:
-- Development mode (`npm run dev`): Uses `.env.development`
-- Production build (`npm run build`): Uses `.env.production`
+```bash
+# Start development server
+npm run dev
 
-**Note**: Environment variables must be prefixed with `VITE_` to be exposed to the client-side code.
+# Build for production
+npm run build
+```
+
+## 🌐 Vercel Deployment
+
+### Option 1: Deploy via Vercel Dashboard
+
+1. Go to [Vercel Dashboard](https://vercel.com/new)
+2. Import this repository
+3. Configure environment variables in Vercel settings
+4. Deploy!
+
+### Option 2: Deploy via Vercel CLI
+
+```bash
+# Install Vercel CLI
+npm i -g vercel
+
+# Login to Vercel
+vercel login
+
+# Deploy to production
+vercel --prod
+```
+
+### Vercel Configuration
+
+The project includes `vercel.json` with:
+- Build command: `npm run build`
+- Output directory: `dist`
+- SPA routing support
+- Asset caching headers
+
+## 📁 Project Structure
+
+```
+frontend/
+├── src/
+│   ├── app/
+│   │   ├── components/
+│   │   │   ├── auth/          # Authentication components
+│   │   │   ├── dashboard.tsx  # Main dashboard
+│   │   │   ├── growth-calculator.tsx
+│   │   │   ├── landing-page.tsx
+│   │   │   └── ui/            # Reusable UI components
+│   │   └── App.tsx
+│   ├── config/
+│   │   └── firebase.ts        # Firebase configuration
+│   ├── contexts/
+│   │   └── AuthContext.tsx    # Auth state management
+│   ├── services/
+│   │   └── api.ts             # API client
+│   └── styles/                # Global styles
+├── public/
+├── vercel.json                # Vercel configuration
+├── vite.config.ts             # Vite configuration
+└── package.json
+```
+
+## 🔑 Features
+
+- 🔐 Firebase Authentication (Google Sign-In)
+- 📊 GDP Growth Prediction Dashboard
+- 🎯 Scenario Simulation
+- 📈 Interactive Charts
+- 📱 Responsive Design
+- 🎨 Modern UI with Tailwind CSS
+
+## 🔗 API Integration
+
+The frontend connects to the backend API for:
+- GDP predictions
+- Scenario simulations
+- Historical data retrieval
+
+Ensure your backend is deployed and the `VITE_API_BASE_URL` is correctly set.
+
+## 🐛 Troubleshooting
+
+### Build Errors
+
+```bash
+# Clear cache and reinstall
+rm -rf node_modules package-lock.json
+npm install
+```
+
+### Environment Variables Not Loading
+
+- Ensure variables start with `VITE_`
+- Restart dev server after changing `.env` files
+- In Vercel, add variables in Project Settings → Environment Variables
+
+### Firebase Auth Issues
+
+- Verify Firebase config in Vercel environment variables
+- Check Firebase Console for authorized domains
+- Add your Vercel domain to Firebase authorized domains
+
+## 📝 License
+
+MIT
+
+## 👤 Author
+
+Jay Gavali
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+---
+
+**Ready for Vercel deployment!** 🚀
