@@ -106,12 +106,12 @@ export function LandingPage({ onStartPrediction }: LandingPageProps) {
               <div className="text-gray-400 text-sm">Historical economic data from 1973 to present</div>
             </div>
             <div className="backdrop-blur-sm bg-white/5 rounded-2xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105">
-              <div className="text-5xl mb-4 text-[#10b981]">195</div>
+              <div className="text-5xl mb-4 text-[#10b981]">203</div>
               <div className="text-white text-lg mb-2">Countries Covered</div>
               <div className="text-gray-400 text-sm">Global coverage across all major economies</div>
             </div>
             <div className="backdrop-blur-sm bg-white/5 rounded-2xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105">
-              <div className="text-5xl mb-4 text-[#10b981]">98%</div>
+              <div className="text-5xl mb-4 text-[#10b981]">90%</div>
               <div className="text-white text-lg mb-2">Prediction Accuracy</div>
               <div className="text-gray-400 text-sm">Validated against real-world economic outcomes</div>
             </div>
@@ -190,7 +190,7 @@ export function LandingPage({ onStartPrediction }: LandingPageProps) {
                   1
                 </div>
                 <h3 className="text-white text-xl mb-3 mt-4">Select Country</h3>
-                <p className="text-gray-400">Choose from 195 countries to analyze their economic trajectory and growth potential</p>
+                <p className="text-gray-400">Choose from 203 countries to analyze their economic trajectory and growth potential</p>
               </div>
             </div>
 
